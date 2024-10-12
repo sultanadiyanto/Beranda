@@ -1,12 +1,21 @@
 <?php
 
-class Kompetisi {
+class Kompetisi extends Controller{
     public function index($nama = 'Luqman', $istri = 'Kaela Kovalskia')
     {
-        echo "Halo saya $nama, saya istri $istri";
+        $data['nama'] = $nama;
+        $data['istri'] = $istri;
+
+        $data['judul'] = 'Index Kompetisi';
+        $this->view('templates/header', $data);
+        $this->view('kompetisi/index', $data);
+        $this->view('templates/footer');
     }
     public function page() 
     {
-        echo 'kompetisi/page';
+        $data['judul'] = 'Page Kompetisi';
+        $this->view('templates/header', $data);
+        $this->view('kompetisi/page');
+        $this->view('templates/footer');
     }
 }
