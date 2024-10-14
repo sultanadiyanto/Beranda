@@ -19,7 +19,7 @@
         <div class="navbar-nav">
             <a class="nav-link active" aria-current="page" href="<?= BASEURL; ?>">Home</a>
             <a class="nav-link" href="<?= BASEURL; ?>/kompetisi">Kompetisi</a>
-            <a class="nav-link" href="#">Prestasi</a>
+            <a class="nav-link" href="<?= BASEURL; ?>/prestasi">Prestasi</a>
             <a class="nav-link disabled" aria-disabled="true">Disabled</a>
         </div>
         </div>
