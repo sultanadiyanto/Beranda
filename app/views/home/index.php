@@ -5,7 +5,7 @@
         <img src="<?= BASEURL;?>/img/GSC_Polindra.jpeg" alt="GSC" class="shadow">
         <div class="mt-4 p-5 bg-primary text-white rounded">
             <h1>Ini Home</h1> 
-            <p>Halo nama saya <?= $data['nama'] ?></p> 
+            <p>Halo nama saya luqman</p> 
         </div>
     </div>
 </div>
