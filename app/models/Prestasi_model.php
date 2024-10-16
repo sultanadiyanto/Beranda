@@ -24,6 +24,25 @@ class Prestasi_model {
         return $this->db->single();
     }
 
+    public function tambahDataPrestasi($data)
+    {
+        $query = "INSERT INTO mahasiswa
+                    VAlUES
+                    ('', :nama, :email, :password, :nim, :jurusan )";
+
+        $this->db->query($query);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('password', $data['password']);
+        $this->db->bind('nim', $data['nim']);
+        $this->db->bind('jurusan', $data['jurusan']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+    
+
     // private $mhs = [
     //     [
     //         "nama" => "Airani Iofiften",

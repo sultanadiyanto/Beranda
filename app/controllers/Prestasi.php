@@ -21,6 +21,9 @@ class Prestasi extends Controller{
 
     public function tambah()
     {
-        var_dump($_POST);
+        if($this->model('User_model')->tambahDataPrestasi($_POST) > 0) {
+            header('Location: ' . BASEURL . '/prestasi');
+            exit;
+        }
     }
 }
