@@ -41,4 +41,35 @@ class User_model {
 
         return $this->db->rowCount();
     }
+
+    public function hapusDataPrestasi($id)
+    {
+        $query = "DELETE FROM mahasiswa WHERE id = :id";
+        
+        $this->db->query($query);
+        $this->db->bind('id', $id);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
+
+    public function editDataPrestasi($data)
+    {
+        $query = "UPDATE mahasiswa
+            SET nama = :nama, email = :email, password = :password, nim = :nim, jurusan = :jurusan WHERE id = :id";
+
+
+        $this->db->query($query);
+        $this->db->bind('nama', $data['nama']);
+        $this->db->bind('email', $data['email']);
+        $this->db->bind('password', $data['password']);
+        $this->db->bind('nim', $data['nim']);
+        $this->db->bind('jurusan', $data['jurusan']);
+        $this->db->bind('id', $data['id']);
+
+        $this->db->execute();
+
+        return $this->db->rowCount();
+    }
 }
