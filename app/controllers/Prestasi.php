@@ -3,7 +3,8 @@
 class Prestasi extends Controller{
     public function index()
     {
-        $data['judul'] = 'coba Mahasiswa';
+        $data['judul'] = 'Prestasi';
+        $data['page'] = 'Prestasi';
         $data['mhs'] = $this->model('User_model')->getAllmahasiswa();
         $this->view('templates/header', $data);
         $this->view('prestasi/index', $data);
@@ -12,7 +13,8 @@ class Prestasi extends Controller{
 
     public function detail($id)
     {
-        $data['judul'] = 'Data lengkap';
+        $data['judul'] = 'Detail';
+        $data['page'] = 'Prestasi';
         $data['mhs'] = $this->model('User_model')->getPrestasiById($id);
         $this->view('templates/header', $data);
         $this->view('prestasi/detail', $data);
